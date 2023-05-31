@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+		function addPic(){
+		var oldNode = document.getElementById("a");
+		var image = document.createElement("img");
+		image.setAttribute("src","images/banana.jpg");
+		document.body.insertBefore (image,oldNode);
+		}
+		function copyPic(){
+		var oldNode = document.getElementById("b");
+		var copyImage = oldNode.cloneNode (false);
+		document.body.appendChild(copyImage);
+		}
+		</script>
+		</head>
+		
+		<body>
+		<h2>喜欢的水果</h2>
+		<input id="b1" type="button" value="增加一幅图片" onclick="addPic()"/>
+		<input id="b2" type="button" value="复制原图" onclick="copyPic()"/><br />
+		
+	<img src="images/apple.jpg" id="a" alt="苹果">
+	<img src="images/grape.jpg" id="b" alt="葡萄">
+		 </body>
+		 </html>
+	
